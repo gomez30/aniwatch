@@ -13,7 +13,7 @@
 # <p align="center">Aniwatch</p>
 
 <div align="center">
-  📦 A scraper package serving anime information from <a href="https://hianimez.to/home" target="_blank">hianimez.to</a>
+  📦 A scraper package serving anime information from <a href="https://aniwatchtv.to/home" target="_blank">aniwatchtv.to</a>
   <br/>
   <strong>
     <a 
@@ -53,7 +53,7 @@
 
 > [!IMPORTANT]
 >
-> 1. This package is just an unofficial package for [hianimez.to](https://hianimez.to) and is in no other way officially related to the same.
+> 1. This package is just an unofficial package for [aniwatchtv.to](https://aniwatchtv.to) and is in no other way officially related to the same.
 > 2. The content that this package provides is not mine, nor is it hosted by me. These belong to their respective owners. This package just demonstrates how to build a package that scrapes websites and uses their content.
 
 ## Table of Contents

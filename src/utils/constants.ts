@@ -4,17 +4,7 @@ export const USER_AGENT_HEADER =
 export const ACCEPT_HEADER =
     "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" as const;
 
-// Mirror domains (as of March 2026):
-//
-// Domain          | AJAX prefix | Embed type  | Suggest | Producer | Schedule | Sources
-// --------------- | ----------- | ----------- | ------- | -------- | -------- | -------
-// aniwatchtv.to   | /v2         | megacloud   | OK      | OK       | OK       | OK      (default)
-// 9animetv.to     | (none)      | rapid-cloud | OK      | 404      | OK       | OK
-// kaido.to        | (none)      | rapid-cloud | broken  | 404      | empty    | OK
-// 4anime.gg       | (none)      | rapid-cloud | OK      | 404      | disabled | OK
-// hianime.to      | /v2         | megacloud   | OK      | OK       | goodbye  | dead
-// hianimez.to     | /v2         | megacloud   | dead    | dead     | dead     | dead
-//
+// Base domain for all requests (update here if mirror changes)
 // Configurable via env: ANIWATCH_DOMAIN, ANIWATCH_AJAX_VERSION_PREFIX
 const DOMAIN = process.env.ANIWATCH_DOMAIN || "aniwatchtv.to";
 

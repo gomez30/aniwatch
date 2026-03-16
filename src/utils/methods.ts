@@ -318,7 +318,13 @@ export async function getMegaCloudClientKey(
     try {
         const req = await fetch(
             `https://megacloud.blog/embed-2/v3/e-1/${xrax}`,
-            { headers: { Referer: `${SRC_BASE_URL}/` } }
+            {
+                headers: {
+                    Referer: `${SRC_BASE_URL}/`,
+                    "User-Agent": USER_AGENT_HEADER,
+                    "Accept-Language": "en-US,en;q=0.9"
+                }
+            }
         );
         text = await req.text();
         // regex's for the following key obfuscation methods

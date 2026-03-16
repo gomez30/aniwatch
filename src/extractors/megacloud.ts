@@ -387,10 +387,9 @@ class MegaCloud {
             {
                 headers: {
                     Host: "megaplay.buzz",
-                    "User-Agent":
-                        "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0",
+                    "User-Agent": USER_AGENT_HEADER,
                     Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-                    "Accept-Language": "en-US,en;q=0.5",
+                    "Accept-Language": "en-US,en;q=0.9",
                     DNT: "1",
                     "Sec-GPC": "1",
                     Connection: "keep-alive",
@@ -418,16 +417,15 @@ class MegaCloud {
             {
                 headers: {
                     Host: "megaplay.buzz",
-                    "User-Agent":
-                        "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0",
+                    "User-Agent": USER_AGENT_HEADER,
                     Accept: "application/json, text/javascript, */*; q=0.01",
-                    "Accept-Language": "en-US,en;q=0.5",
+                    "Accept-Language": "en-US,en;q=0.9",
                     "Accept-Encoding": "gzip, deflate, br, zstd",
                     "X-Requested-With": "XMLHttpRequest",
                     DNT: "1",
                     "Sec-GPC": "1",
                     Connection: "keep-alive",
-                    Referer: "https://megaplay.buzz/stream/s-2/141679/sub",
+                    Referer: `https://megaplay.buzz/stream/s-2/${epId}/${category}`,
                     "Sec-Fetch-Dest": "empty",
                     "Sec-Fetch-Mode": "cors",
                     "Sec-Fetch-Site": "same-origin",

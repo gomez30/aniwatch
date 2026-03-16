@@ -732,6 +732,8 @@ async function loadWasm(url: any) {
         headers: {
             Referer: fake_window.location.href,
             Host: "megacloud.tv",
+            "User-Agent": USER_AGENT_HEADER,
+            "Accept-Language": "en-US,en;q=0.9"
         },
     });
 
@@ -796,8 +798,9 @@ const V = async () => {
 const getMeta = async (url: string) => {
     let resp = await fetch(url, {
         headers: {
-            UserAgent: user_agent,
-            Referrer: referrer,
+            "User-Agent": user_agent,
+            Referer: referrer,
+            "Accept-Language": "en-US,en;q=0.9"
         },
     });
     let txt = await resp.text();
@@ -861,17 +864,17 @@ export async function getSources(xrax: string) {
             browser_version;
 
         let resp_json = await (
-            await fetch(getSourcesUrl, {
-                headers: {
-                    "User-Agent": user_agent,
-                    //"Referrer": fake_window.origin + "/v2/embed-4/" + xrax + "?z=",
-                    Referer: embed_url + xrax + "?k=1",
-                    "X-Reuested-With": "XMLHttpRequest",
-                },
-                method: "GET",
-                mode: "cors",
-            })
-        ).json();
+                await fetch(getSourcesUrl, {
+                    headers: {
+                        "User-Agent": user_agent,
+                        Referer: embed_url + xrax + "?k=1",
+                        "X-Requested-With": "XMLHttpRequest",
+                        "Accept-Language": "en-US,en;q=0.9"
+                    },
+                    method: "GET",
+                    mode: "cors",
+                })
+            ).json();
 
         //let encrypted = resp_json.sources;
         let Q3 = fake_window.localStorage.kversion;
